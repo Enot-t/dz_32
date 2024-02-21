@@ -1,0 +1,16 @@
+/*Создать таблицу игры (имя игры, дата и время сохранения)
+добавить 3 любые игры 
+показать все записи игр
+*/
+
+CREATE TABLE IF NOT EXISTS Game(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	date_time datetime NOT NULL
+);
+
+INSERT INTO Game(name, date_time) VALUES ("DOOM", "2024-02-01 14:20:59");
+INSERT INTO Game(name, date_time) VALUES ("World of Warcraft", "2023-01-11 22:20:59");
+INSERT INTO Game(name, date_time) VALUES ("Heroes of might and magic", "2023-10-19 10:10:19");
+	
+SELECT * from Game
