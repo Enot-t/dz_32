@@ -1,0 +1,18 @@
+/*Создать таблицу оружие(имя, тип, мощность)
+добавить 3 любых оружия
+показать оружия(имя, тип и мощность) мощность, которых равна 200*/
+
+
+CREATE TABLE IF NOT EXISTS Arms(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	type TEXT NOT NULL,
+	power_in_joule INTEGER NOT NULL
+);
+
+INSERT INTO Arms(name, type, power_in_joule) VALUES ("Mosin rifle", "rifle", 2530);
+INSERT INTO Arms(name, type, power_in_joule ) VALUES ("AK-47", "assault rifle", 918);
+INSERT INTO Arms(name, type, power_in_joule ) VALUES ("Shpagin's machine gun", "machine gun", 200);
+	
+SELECT * from Arms
+WHERE power_in_joule = 200;
